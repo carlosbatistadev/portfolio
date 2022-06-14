@@ -70,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     width: width,
                     height: 600,
                     child: DefaultTabController(
-                      initialIndex: 2,
+                      initialIndex: 1,
                       length: 3,
                       child: Scaffold(
                         appBar: AppBar(
@@ -92,56 +92,55 @@ class _MyHomePageState extends State<MyHomePage> {
                         body: TabBarView(
                           physics: const BouncingScrollPhysics(),
                           children: [
-                            Column(
-                              children: const [
-                                SizedBox(height: 20),
-                                SkilWidget(
-                                  title: 'Dart',
-                                  imagePath:
-                                      'https://upload.wikimedia.org/wikipedia/commons/7/7e/Dart-logo.png',
-                                  percent: 85,
-                                ),
-                                SizedBox(height: 20),
-                                SkilWidget(
-                                  title: 'Flutter',
-                                  imagePath:
-                                      'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_1080,q_100,w_1080/v1/gcs/platform-data-dsc/events/flutter-icon.png',
-                                  percent: 90,
-                                ),
-                                SizedBox(height: 20),
-                                SkilWidget(
-                                  title: 'Python',
-                                  imagePath:
-                                      'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/2048px-Python-logo-notext.svg.png',
-                                  percent: 50,
-                                ),
-                                SizedBox(height: 20),
-                                SkilWidget(
-                                  title: 'Firebase',
-                                  imagePath:
-                                      'https://cdn4.iconfinder.com/data/icons/google-i-o-2016/512/google_firebase-2-512.png',
-                                  percent: 67,
-                                ),
-                              ],
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(16.0),
+                            SingleChildScrollView(
                               child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
                                 children: const [
-                                  Text(
-                                    'Minimalista, Natural de São Paulo, Itaquera. Nascido em 2002',
+                                  SizedBox(height: 20),
+                                  Padding(
+                                    padding: EdgeInsets.all(8.0),
+                                    child: Text(
+                                      'Responsável, facilidade em aprender coisas novas, trabalho em equipe, procurando sempre evolução.\n'
+                                      'Bastante familiarizado com o GetX, mas entendo bem de Mobx, Modular, GetIt e entre outros...\n'
+                                      'Não existe impedimentos para eu aprender coisas novas, alías estou sempre procurando me aperfeiçoar.\n'
+                                      'Conhecimento da plataforma Android, nem tanto do lado do IOS por ainda não ter os equipamentos necessários.\n'
+                                      'Conhecimento em Github, GitLab e BitBucket.\n'
+                                      'E muito mais, para saber se eu me adequo ao que você precisa, entre em contato.',
+                                    ),
                                   ),
-                                  Text(
-                                    'Eu gosto de pensar, e a programação exige isso de mim, logo esta característica é bem aproveitada.'
-                                    '\n\nSou cristão protestante, evangélico, estou estudando Teologia, Musica e aprendendo a tocar guitarra.'
-                                    '\n\nSou o tipo de desenvolvedor que gosta de utilizar boas práticas de programação, escrever códigos de fácil entendimento e de fácil manutenção.'
-                                    '\n\nA tecnologia atual que estou me aperfeiçoando é o Flutter com a linguagem Dart como base, sou desenvolvedor de aplicações para dispositivos portáteis, como o celular.'
-                                    'Mas não me limito apenas ao Flutter, estou querendo me aprofundar mais, logo, o Kotlin e o Swift estão na minha lista de habilidades a serem incluídas.'
-                                    '\n\nSe você quer um desenvolvedor que mande a real em relação a qualidade de código, que desenvolve pensando no futuro e aplicando as melhores práticas,'
-                                    'eu sou a pessoa ideal para o seu projeto! '
-                                    'Eu não só desenvolvo o seu programa, mas também dou sugestões, mostro outros caminhos e assim conseguimos chegar rapidamente em algum lugar!',
-                                    textAlign: TextAlign.center,
+                                  SizedBox(height: 20),
+                                  SkilWidget(
+                                    title: 'Linguagem Dart',
+                                    imagePath:
+                                        'https://upload.wikimedia.org/wikipedia/commons/7/7e/Dart-logo.png',
+                                    percent: 85,
+                                  ),
+                                  SizedBox(height: 20),
+                                  SkilWidget(
+                                    title: 'Framework Flutter',
+                                    imagePath:
+                                        'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_1080,q_100,w_1080/v1/gcs/platform-data-dsc/events/flutter-icon.png',
+                                    percent: 90,
+                                  ),
+                                  SizedBox(height: 20),
+                                  SkilWidget(
+                                    title: 'Linguagem Python',
+                                    imagePath:
+                                        'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/2048px-Python-logo-notext.svg.png',
+                                    percent: 50,
+                                  ),
+                                  SizedBox(height: 20),
+                                  SkilWidget(
+                                    title: 'BaaS Firebase',
+                                    imagePath:
+                                        'https://cdn4.iconfinder.com/data/icons/google-i-o-2016/512/google_firebase-2-512.png',
+                                    percent: 67,
+                                  ),
+                                  SizedBox(height: 20),
+                                  SkilWidget(
+                                    title: 'Linguagem Kotlin',
+                                    imagePath:
+                                        'https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png',
+                                    percent: 20,
                                   ),
                                 ],
                               ),
@@ -149,25 +148,99 @@ class _MyHomePageState extends State<MyHomePage> {
                             Padding(
                               padding: const EdgeInsets.all(16.0),
                               child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 children: const [
-                                  ExperienceWidget(
-                                    title: 'Um app de hotel',
-                                    description:
-                                        'Desenvolvimento de algumas telas para um app. Foi um dos meus primeiros Freelas',
-                                  ),
-                                  SizedBox(height: 20),
-                                  ExperienceWidget(
-                                    title: 'Desapego Amigo',
-                                    description:
-                                        'Desenvolvimento de um alguns modulos e suporte',
-                                  ),
-                                  SizedBox(height: 20),
-                                  ExperienceWidget(
-                                    title: 'Mediclog',
-                                    description:
-                                        'Desenvolvimento de um alguns modulos, refatoração e suporte',
+                                  Text(
+                                    'Minimalista, Natural de São Paulo, Itaquera. Nascido em 2002.\n'
+                                    'Minha principal ferramenta de desenvolvimento é o Flutter, '
+                                    'e sou o tipo de desenvolvedor que sempre procura seguir '
+                                    'as melhores práticas de desenvolvimento como Clean Code por exemplo.\n'
+                                    'Uma das características que fazem com que eu seja um bom desenvolvedor '
+                                    'é que eu não penso como um robô, e sim como desenvolvedor.\n'
+                                    'Significa que eu desenvolvo pensando nos detalhes, e não apenas '
+                                    'seguindo um modelo de design ou regra de negócio.\n'
+                                    '',
+                                    textAlign: TextAlign.justify,
                                   ),
                                 ],
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(16.0),
+                              child: SingleChildScrollView(
+                                child: Column(
+                                  children: const [
+                                    ExperienceWidget(
+                                      title: 'Um app de hotel',
+                                      description:
+                                          'Desenvolvimento de algumas telas para um app. Foi um dos meus primeiros Freelas',
+                                    ),
+                                    SizedBox(height: 20),
+                                    ExperienceWidget(
+                                      title: 'Desapego Amigo',
+                                      description:
+                                          'Desenvolvimento de um alguns modulos e suporte',
+                                    ),
+                                    SizedBox(height: 20),
+                                    ExperienceWidget(
+                                      title: 'Mediclog',
+                                      description:
+                                          'Correções e desenvolvimento de alguns modulos',
+                                    ),
+                                    SizedBox(height: 20),
+                                    ExperienceWidget(
+                                      title: 'BMP Money Plus',
+                                      description:
+                                          'Desenvolvimento de dois modulos',
+                                    ),
+                                    SizedBox(height: 20),
+                                    ExperienceWidget(
+                                      title: 'Apoiadores Brasil',
+                                      description:
+                                          'Participei de todo desenvolvimento do app',
+                                    ),
+                                    SizedBox(height: 20),
+                                    ExperienceWidget(
+                                      title: 'Consulta Placas - FIPE e Multas',
+                                      description:
+                                          'Participei de todo desenvolvimento do app',
+                                    ),
+                                    SizedBox(height: 20),
+                                    ExperienceWidget(
+                                      title: 'FTeamFlix',
+                                      description:
+                                          'Participei de todo desenvolvimento do app',
+                                    ),
+                                    SizedBox(height: 20),
+                                    ExperienceWidget(
+                                      title: 'ISpecial',
+                                      description:
+                                          'Participei de todo desenvolvimento do app',
+                                    ),
+                                    SizedBox(height: 20),
+                                    ExperienceWidget(
+                                      title: 'Mochilazap',
+                                      description: 'Desenvolvido por mim',
+                                    ),
+                                    SizedBox(height: 20),
+                                    ExperienceWidget(
+                                      title:
+                                          'Ligue pra saber! - Códigos USSD e MMI',
+                                      description: 'Desenvolvido por mim',
+                                    ),
+                                    SizedBox(height: 20),
+                                    ExperienceWidget(
+                                      title: 'Questionário Bíblico',
+                                      description: 'Desenvolvido por mim',
+                                    ),
+                                    SizedBox(height: 20),
+                                    ExperienceWidget(
+                                      title: 'Fightnize',
+                                      description: 'Correções de bugs',
+                                    ),
+                                    SizedBox(height: 20),
+                                  ],
+                                ),
                               ),
                             ),
                           ],
@@ -281,15 +354,19 @@ class SkilWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        Image.network(
-          imagePath,
-          width: 20,
-          height: 20,
+        Row(
+          children: [
+            Image.network(
+              imagePath,
+              width: 20,
+              height: 20,
+            ),
+            const SizedBox(width: 10),
+            Text(title),
+          ],
         ),
-        const SizedBox(width: 10),
-        Text(title),
         Tooltip(
           message: tooltip,
           child: Slider(
